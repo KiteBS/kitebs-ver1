@@ -21,7 +21,7 @@ const Sidebar = () => {
       top: "50px",
     },
     bmBurgerBars: {
-      background: "#F8C983",
+      background: "#053F5C",
     },
     bmBurgerBarsHover: {
       background: "#a90000",
@@ -31,14 +31,14 @@ const Sidebar = () => {
       width: "24px",
     },
     bmCross: {
-      background: "#F8C983",
+      background: "#053F5C",
     },
     bmMenuWrap: {
       position: "fixed",
       height: "100%",
     },
     bmMenu: {
-      background: "#373a47",
+      background: "#FFFFFF",
       padding: "2.5em 1.5em 0",
       fontSize: "1.15em",
     },
@@ -46,7 +46,7 @@ const Sidebar = () => {
       fill: "#373a47",
     },
     bmItemList: {
-      color: "#F8C983",
+      color: "#053F5C",
       padding: "0em",
     },
 
