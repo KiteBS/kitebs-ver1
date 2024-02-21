@@ -1,12 +1,13 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Oswald } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 import Providers from "@/components/Providers";
 import { Toaster } from "react-hot-toast";
 import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
+const font = Oswald({ subsets: ["latin"], weight: ["400"] });
 
 export const metadata: Metadata = {
   title: "Fly with Kite",
@@ -22,7 +23,7 @@ export default function RootLayout({
     <ClerkProvider>
       <Providers>
         <html lang="en">
-          <body className={inter.className}>
+          <body className={font.className}>
             {children}
             <Analytics />
           </body>
