@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import Sidebar from "@/components/SideBar";
 import { useMediaQuery } from "react-responsive";
 import { NavDesktop } from "./NavDesktop";
 import { NavMobile } from "./NavMobile";
