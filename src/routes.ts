@@ -1,27 +1,39 @@
-import { BiHomeAlt2 } from "react-icons/bi";
-import { FiSearch } from "react-icons/fi";
+import { FaHome } from "react-icons/fa";
+import { MdConnectWithoutContact } from "react-icons/md";
 import { PiChatCircleBold } from "react-icons/pi";
-import { IoPricetagsOutline } from "react-icons/io5";
+import { IoIosPricetags } from "react-icons/io";
+import { BiSolidOffer } from "react-icons/bi";
+import { BiNews } from "react-icons/bi";
 
 export const routes = [
   {
     title: "Home",
     href: "#",
-    Icon: BiHomeAlt2,
+    Icon: FaHome,
   },
   {
-    title: "Explore",
+    title: "Offers",
     href: "#",
-    Icon: FiSearch,
+    Icon: BiSolidOffer,
+  },
+  {
+    title: "News",
+    href: "#",
+    Icon: BiNews,
   },
   {
     title: "Pricing",
     href: "#",
-    Icon: IoPricetagsOutline,
+    Icon: IoIosPricetags,
   },
   {
     title: "About",
     href: "#",
     Icon: PiChatCircleBold,
+  },
+  {
+    title: "Contact Us",
+    href: "#",
+    Icon: MdConnectWithoutContact,
   },
 ];

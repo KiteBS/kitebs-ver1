@@ -1,6 +1,8 @@
 import { routes } from "../routes";
 import Link from "next/link";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { LogIn } from "lucide-react";
 
 export const NavDesktop = () => {
   return (
@@ -16,6 +18,7 @@ export const NavDesktop = () => {
           />
         </Link>
       </div>
+
       <div>
         <ul className="lg:flex gap-5 text-xl">
           {routes.map((route) => {

@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { UserButton } from "@clerk/nextjs";
 import { auth, currentUser } from "@clerk/nextjs";
 import Link from "next/link";
-import { ArrowRight, LogIn } from "lucide-react";
+import { ArrowRight, LogIn, LayoutDashboard } from "lucide-react";
 import FileUpload from "@/components/FileUpload";
 import { checkSubscription } from "@/lib/subscription";
 import SubscriptionButton from "@/components/SubscriptionButton";
@@ -64,8 +64,8 @@ export default async function Home() {
             <div className="flex items-center">
               {isAuth ? (
                 <div>
-                  <h1 className="mr-3 text-4xl font-semibold">
-                    Hi {user?.firstName}, let&apos;s get started
+                  <h1 className="mr-2 text-4xl font-semibold">
+                    Hi {user?.firstName}
                   </h1>
                 </div>
               ) : (
@@ -86,31 +86,43 @@ export default async function Home() {
             </div>
 
             <div className="flex mt-2">
-              {isAuth && hasPastChats && firstChat && (
-                <Link href={`/chat/${active_user_id}/${firstChat?.id}`}>
-                  <Button>
-                    Go to chats <ArrowRight className="ml-2" />
-                  </Button>
-                </Link>
-              )}
               {isAuth && (
-                <div className="ml-3">
+                <div>
                   <SubscriptionButton isPro={isPro} />
                 </div>
               )}
             </div>
 
-            <div className="w-full mt-4">
-              {isAuth ? (
-                <FileUpload />
-              ) : (
-                <Link href="/sign-in">
-                  <Button>
-                    Log in to get started
-                    <LogIn className="w-4 h-4 ml-2"></LogIn>
-                  </Button>
-                </Link>
-              )}
+            <div className="w-full gap-4 mt-2">
+              <div>
+                {" "}
+                {isAuth ? (
+                  <Link href="/sign-in">
+                    <Button>
+                      Dashboard
+                      <LayoutDashboard className="w-4 h-4 ml-2" />
+                    </Button>
+                  </Link>
+                ) : (
+                  <Link href="/sign-in">
+                    <Button>
+                      Log in
+                      <LogIn className="w-4 h-4 ml-2"></LogIn>
+                    </Button>
+                  </Link>
+                )}
+              </div>
+              <div>
+                {" "}
+                {!isAuth && (
+                  <Link href="/sign-up">
+                    <Button>
+                      Sign up
+                      <LogIn className="w-4 h-4 ml-2"></LogIn>
+                    </Button>
+                  </Link>
+                )}
+              </div>
             </div>
           </div>
         </div>

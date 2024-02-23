@@ -6,6 +6,8 @@ import { Squash as Hamburger } from "hamburger-react";
 import { routes } from "../routes";
 import Link from "next/link";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { LogIn } from "lucide-react";
 
 export const NavMobile = () => {
   const [isOpen, setOpen] = useState(false);
@@ -65,6 +67,7 @@ export const NavMobile = () => {
             )}
           </AnimatePresence>
         </div>
+
         {/*Title */}
         <div>
           <Link href="/" className="text-xl">
