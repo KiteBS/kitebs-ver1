@@ -70,7 +70,9 @@ export default async function Home() {
                 </div>
               ) : (
                 <div>
-                  <h1 className="mr-3 text-5xl font-semibold">Fly With Kite</h1>
+                  <h1 className="mr-3 text-5xl font-semibold">
+                    Elevate Life - Fly With Kite
+                  </h1>
                   <div className="max-w-xl mt-2 text-xl">
                     <p>
                       Join millions of students, researchers, and professionals
