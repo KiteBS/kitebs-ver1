@@ -9,6 +9,8 @@ import { Analytics } from "@vercel/analytics/react";
 const inter = Inter({ subsets: ["latin"] });
 const font = Oswald({ subsets: ["latin"], weight: ["400"] });
 
+export const runtime = "edge";
+
 export const metadata: Metadata = {
   title: "Fly with Kite",
   description: "Amazing Savings on Your Fingers",
