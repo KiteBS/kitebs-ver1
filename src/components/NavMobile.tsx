@@ -68,7 +68,13 @@ export const NavMobile = () => {
         {/*Title */}
         <div>
           <Link href="/" className="text-xl">
-            <h1>Kite Business Solutions</h1>
+            <Image
+              src="/pictures/KITE.png"
+              alt="KITE Logo"
+              width={70}
+              height={70}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
           </Link>
         </div>
       </div>
